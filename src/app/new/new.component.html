@@ -1,0 +1,5 @@
+<div [style.backgroundColor]="couleur" #champ>
+    <input (change)='setColor($event.target.value)' type="text" />
+</div>
+
+<button (click)='setColor("white")'>clicc me</button>
