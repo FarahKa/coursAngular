@@ -19,6 +19,7 @@ import { ListComponent } from './cv/components/list/list.component';
 import { NgstyleComponent } from './directives/ngstyle/ngstyle.component';
 import { RainbowDirective } from './exerciceArcEnCiel/rainbow.directive';
 import { RainbowComponent } from './exerciceArcEnCiel/rainbow/rainbow.component';
+import { TodoComponent } from './todo/components/todo/todo.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { RainbowComponent } from './exerciceArcEnCiel/rainbow/rainbow.component'
     ListComponent,
     NgstyleComponent,
     RainbowDirective,
-    RainbowComponent
+    RainbowComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
