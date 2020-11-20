@@ -20,6 +20,7 @@ import { NgstyleComponent } from './directives/ngstyle/ngstyle.component';
 import { RainbowDirective } from './exerciceArcEnCiel/rainbow.directive';
 import { RainbowComponent } from './exerciceArcEnCiel/rainbow/rainbow.component';
 import { TodoComponent } from './todo/components/todo/todo.component';
+import { EmbaucheComponent } from './embauche/components/embauche/embauche.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { TodoComponent } from './todo/components/todo/todo.component';
     NgstyleComponent,
     RainbowDirective,
     RainbowComponent,
-    TodoComponent
+    TodoComponent,
+    EmbaucheComponent
   ],
   imports: [
     BrowserModule,
