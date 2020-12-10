@@ -1,22 +1,22 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Personne } from '../../model/personne';
+import { CvService } from '../../services/cv.service';
+import { Personne } from './../../model/personne';
 
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
-  styleUrls: ['./item.component.css']
+  styleUrls: ['./item.component.css'],
 })
 export class ItemComponent implements OnInit {
   @Input() personne: Personne;
-  @Output() sendPersonne = new EventEmitter();
-  constructor() { }
+ /*  @Output() sendPersonne = new EventEmitter(); */
+  constructor(
+    private cvService: CvService
+  ) {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
   selectItem() {
-    //console.log('on item selection' + this.personne);
-    this.sendPersonne.emit(this.personne);
+    /* this.sendPersonne.emit(this.personne); */
+    this.cvService.selectPersonne(this.personne);
   }
-
 }

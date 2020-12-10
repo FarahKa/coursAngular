@@ -1,24 +1,34 @@
 import { Injectable } from '@angular/core';
-import { Todo } from '../models/todo-model';
+import { LoggerService } from 'src/app/services/logger.service';
+import { Todo } from '../model/todo';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TodoService {
-  todolist : Todo[] = [];
-  constructor() { }
+  todos: Todo[] = [];
 
-  addTodo = (nom : string, contenu : string) => {
-    const todo = new Todo(nom, contenu);
-    this.todolist.push(todo);
+  constructor(private loggerService: LoggerService) {}
+
+  getTodos(): Todo[] {
+    return this.todos;
   }
 
-  showTodos = () => {
-    return this.todolist;
+  logger() {
+    this.loggerService.logger(this.todos);
   }
 
-  deleteTodo = (nom : string) => {
-    this.todolist = this.todolist.filter((e) => e.nom !== nom);
+  addTodo(todo: Todo) {
+    if (this.todos.length) {
+      todo.id = this.todos[this.todos.length - 1].id + 1;
+    } else {
+      todo.id = 1;
+    }
+    this.todos.push(todo);
   }
 
+  deleteTodo(todo: Todo) {
+    const index = this.todos.indexOf(todo);
+    this.todos.splice(index, 1);
+  }
 }
