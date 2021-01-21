@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { FirstComponent } from './components/first/first.component';
 import { SecondComponent } from './components/second/second.component';
@@ -36,6 +38,9 @@ import { TestNestComponent } from './test-nest/test-nest.component';
 import { TestFormComponent } from './test-form/test-form.component';
 import { ObservableTestComponent } from './observable-test/observable-test.component';
 import { TestHttpComponent } from './components/test-http/test-http.component';
+import { FormTemplateComponent } from './form-template/form-template.component';
+import { DynamicFormComponent } from './dynamic/dynamic-form/dynamic-form.component';
+import { DynamicFormQuestionComponent } from './dynamic/dynamic-form-question/dynamic-form-question.component';
 
 @NgModule({
   declarations: [
@@ -70,8 +75,11 @@ import { TestHttpComponent } from './components/test-http/test-http.component';
     TestFormComponent,
     ObservableTestComponent,
     TestHttpComponent,
+    FormTemplateComponent,
+    DynamicFormComponent,
+    DynamicFormQuestionComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

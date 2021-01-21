@@ -1,0 +1,10 @@
+<span *ngFor= "let champ of template.champs">
+    <label>{{champ.libelle}}</label>
+    <select class="form-control" *ngIf="champ.type === 'select'; else elseBlock" #select>
+        <option class="form-control" *ngFor="let option of champ.options" value="option.value">
+            {{option.name}}
+        </option>
+    </select>
+    <input class="form-control" type={{champ.type}} #elseBlock  >
+    <br>
+</span>
