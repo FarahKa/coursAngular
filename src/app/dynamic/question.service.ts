@@ -63,6 +63,24 @@ export class QuestionService {
           "options" : null //pas d'options car pas selection
         },
         {
+          "id" : "3",
+          "libelle" : "aaaaaaaaaaaaaaaaaa",
+          "type" : "text",
+          "rules" : [
+            {
+              "id" : "champ1",
+              "name" : "required",
+              "value" : "true"
+            }, 
+            {
+              "id" : "2",
+              "name" : "maxLength",
+              "value" : "10"
+            }
+          ],
+          "options" : null //pas d'options car pas selection
+        },
+        {
           "id" : "champ2",
           "libelle" : "Libelle champ 2",
           "type" : "checkbox",
@@ -73,7 +91,7 @@ export class QuestionService {
             //   "value" : "true"
             // }, 
           ],
-          "options" : null //pas d'options car pas selection
+          "options" : null, //pas d'options car pas selection
         },
         {
           "id" : "champ3",
